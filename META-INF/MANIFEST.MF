@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JavaWeb_Toiec
+Bundle-SymbolicName: JavaWeb_Toiec
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: JavaWeb_Toiec.jar,
+ lib/servlet-api.jar
+Automatic-Module-Name: JavaWeb.Toiec
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: BEAN,
+ Controller,
+ DAO,
+ DB,
+ Migrate
