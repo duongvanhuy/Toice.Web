@@ -10,7 +10,7 @@
 <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5 row">
                 <div class="logo col-md-6">
-                    <a href="#"><em>Grad</em> Toeic</a>
+                    <a href="/JavaWeb_Toiec"><em>Grad</em> Toeic</a>
                 </div>
                 <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
                 <nav id="menu" class="main-nav col-md-6" role="navigation">
@@ -20,7 +20,7 @@
                         <li><a href="#section4">Courses</a></li>
 
                         <li><a href="#section6">Contact</a></li>
-                        <li><a href="login.html" class="external">Login</a></li>
+                        <li><a href="/JavaWeb_Toiec/view/Login.jsp" class="external">Login</a></li>
                     </ul>
                 </nav>
             </nav>

@@ -1,33 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<!--Footer
-==========================-->
-
+	pageEncoding="UTF-8"%>
 <footer>
-    <div class="container">
-      <div class="row">
-        Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-        </div>
-        <div class="span6">
-            <div class="social pull-right">
-                <a href="#"><img src="template/frontend/img/social/googleplus.png" alt=""></a>
-                <a href="#"><img src="template/frontend/img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="template/frontend/img/social/twitter.png" alt=""></a>
-                <a href="#"><img src="template/frontend/img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="template/frontend/img/social/rss.png" alt=""></a>
-            </div>
-        </div>
-      </div>
-    </div>
-</footer>
+	<!-- Footer Start -->
+	<div class="container-fluid py-4 px-sm-3 px-md-5"
+		style="background: #111111;">
+		<p class="m-0 text-center">
+			<i class="fa fa-copyright"></i> Copyright 2020 by Grad School |
+			Design: <a href="https://templatemo.com" rel="sponsored"
+				target="_parent">TemplateMo</a><br> Distributed By: <a
+				href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>
 
-<!--/.Footer-->
-</body>
-</html>
+		</p>
+	</div>
+	<!-- Footer End -->
+</footer>

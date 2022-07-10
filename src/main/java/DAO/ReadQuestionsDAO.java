@@ -89,4 +89,47 @@ public class ReadQuestionsDAO {
 		
 		return 0;
 	}
+	
+	// get
+	
+	public static  List<ReadQuestions> getReadElementTest(HttpServletRequest request) {
+//		curElement: tong so phan tÆ° hien thi tren 1 trang
+//		page: trang hiá»‡n thá»�i
+		
+//		readexeciseID: pháº§n reading nÃ o: test 1, test 2,.... nÄƒng cao , cÆ¡ báº£n cÃ¡c kiá»ƒu
+		String sql = "select * from examlnationQuestion";
+		
+		List<ReadQuestions> total = new ArrayList<ReadQuestions>();
+		try {
+			conn = BDConncetion.getSQLSeverConnection();
+			ps = conn.prepareStatement(sql);
+			
+			rs = ps.executeQuery();
+			
+			
+			// Ä‘Ã¢y lÃ  trang web luyá»‡n thi nÃªn tÃ­nh báº£o máº­t Ä‘Ã¡p Ã¡n khÃ´ng cao láº¯m
+			// ta cÃ³ thá»ƒ tráº£ vá»� Ä‘Ã¡p Ã¡n vÃ  lÆ°u nÃ³ á»Ÿ phÃ­a client sau Ä‘Ã³ t sá»­ lÃ½ á»Ÿ client luÃ´n
+			while(rs.next()) {
+				ReadQuestions question = new ReadQuestions();
+				question.setNum(rs.getInt("num"));
+				question.setParagraph(rs.getString("paragraph")); // Ä‘á»� bÃ i
+				question.setQuestion(rs.getString("question")); // cÃ¢u há»�i
+				question.setOption1(rs.getString("option1"));
+				question.setOption2(rs.getString("option2"));
+				question.setOption3(rs.getString("option3"));
+				question.setOption4(rs.getString("option4"));
+				question.setCorrectanswer(rs.getString("correctanswer")); // Ä‘Ã¡p Ã¡n
+				
+				total.add(question);
+			}
+			return total;
+					
+		} catch (ClassNotFoundException e) {
+			request.setAttribute("mesage", e.getMessage());
+		} catch (SQLException e) {
+			request.setAttribute("mesage", e.getMessage());
+		}
+		return null;
+		
+	}
 }

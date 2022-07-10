@@ -41,9 +41,7 @@ public class LoginController extends HttpServlet {
 		
 		// check
 		boolean checkLogin = LoginDAO.checkLogin(request, member);
-		boolean checkOption;
-		
-		System.out.println("aaa");		
+		boolean checkOption;		
 		// Lấy ra đối tượng HttpSession
 		HttpSession session = request.getSession();
 		
@@ -53,9 +51,10 @@ public class LoginController extends HttpServlet {
 			
 			// get one user
 			Member memberOne = MemberDAO.getOneMember(request, idMember);
-
+			
+			System.out.println("memberOne" + memberOne.getMemberID());
 			// save sesion
-			session.setAttribute("SessionMember", true);
+			session.setAttribute("SessionMember", memberOne.getMemberID());
 			
 			
 		
@@ -71,7 +70,7 @@ public class LoginController extends HttpServlet {
 				rd.forward(request, response);
 			}
 		}else {
-			session.setAttribute("SessionMember", false);
+			session.setAttribute("SessionMember", "");
 			request.setAttribute("message", "Tên tài khoản hoặc mật khẩu không chính xác");
 			RequestDispatcher rd = request.getRequestDispatcher("view/Login.jsp");
 			rd.forward(request, response);

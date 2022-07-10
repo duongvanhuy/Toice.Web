@@ -42,12 +42,10 @@ public class MemberDAO {
 //				System.out.println("g" );
 				member.setStatus(rs.getInt("status"));
 //				System.out.println("i" );
-//				
-				System.out.println("aaaaaaaaa" + member);
+				
 				return member;
 			}
 			
-			System.out.println("getOneMember2" + member );
 		} catch (SQLException e) {
 			
 			request.setAttribute("mesage", e.getMessage());
